@@ -79,7 +79,7 @@ async function fillAcroform(templatePath, dataPath, outPath) {
 (async () => {
   const [,, inPdf, inJson, outPdf] = process.argv;
   if (!inPdf || !inJson || !outPdf) {
-    console.error('Usage: node fill-form.js <template.pdf> <data.json> <output.pdf>');
+    console.error('Usage: node server.js <template.pdf> <data.json> <output.pdf>');
     process.exit(1);
   }
   await fillAcroform(path.resolve(inPdf), path.resolve(inJson), path.resolve(outPdf));
